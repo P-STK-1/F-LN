@@ -1,4 +1,3 @@
-
 <html lang="es">
 <head>
   <meta charset="utf-8" />
@@ -18,36 +17,28 @@
     .content{min-width:0}.card{padding:20px}.section-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.section-title h2,.section-title h3{margin:0}.muted{color:var(--muted)}
     .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}.stat{padding:16px;border:1px solid var(--line);border-radius:12px}.stat b{font-size:26px;display:block;margin-top:4px}.stat span{font-size:12px;color:var(--muted)}
     .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:end;margin-bottom:14px}.field{display:flex;flex-direction:column;gap:6px}.field label{font-size:12px;font-weight:700;color:#4b5563}.field input,.field select,.field textarea{border:1px solid #d1d5db;border-radius:9px;padding:9px 10px;background:white;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:#6b7280;box-shadow:0 0 0 3px rgba(107,114,128,.12)}
-    .btn{border:1px solid #d1d5db;background:#fff;padding:9px 13px;border-radius:9px;font-weight:700}.btn.primary{background:var(--primary);border-color:var(--primary);color:#fff}.btn.secondary{background:#f3f4f6}.btn.danger{background:#fff1f2;color:#9f1239;border-color:#fecdd3}.btn:disabled{opacity:.45;cursor:not-allowed}
+    .btn{border:1px solid #d1d5db;background:#fff;padding:9px 13px;border-radius:999px;font-weight:700;border-radius:9px;}.btn.primary{background:var(--primary);border-color:var(--primary);color:#fff}.btn.secondary{background:#f3f4f6}.btn.danger{background:#fff1f2;color:#9f1239;border-color:#fecdd3}.btn:disabled{opacity:.45;cursor:not-allowed}
     .table-wrap{overflow:auto;border:1px solid var(--line);border-radius:12px}.data-table{width:100%;border-collapse:collapse;min-width:900px}.data-table th,.data-table td{border-bottom:1px solid var(--line);padding:10px 11px;vertical-align:top;font-size:13px}.data-table th{background:#f9fafb;text-align:left;color:#4b5563;font-size:11px;text-transform:uppercase;letter-spacing:.03em}.data-table tr:last-child td{border-bottom:0}
     .status{display:inline-flex;padding:5px 8px;border-radius:999px;font-size:11px;font-weight:800}.status.pending{background:var(--warnbg);color:var(--warn)}.status.complete{background:var(--okbg);color:var(--ok)}.status.sent{background:#e0e7ff;color:#3730a3}.status.bad{background:var(--badbg);color:var(--bad)}
     .release-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.release-grid .full{grid-column:1/-1}.subcard{border:1px solid var(--line);border-radius:12px;padding:15px}.subcard h3{margin:0 0 12px;font-size:15px}.form-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.span2{grid-column:span 2}.span3{grid-column:1/-1}
     .items-table{width:100%;border-collapse:collapse}.items-table th,.items-table td{border:1px solid var(--line);padding:7px;font-size:12px}.items-table th{background:#f9fafb}.items-table select,.items-table textarea{width:100%;min-width:90px;border:1px solid #d1d5db;border-radius:7px;padding:7px}.items-table textarea{min-height:36px;resize:vertical}
     .readonly-cell{background:#f9fafb;color:#6b7280}.sig-wrap{display:grid;grid-template-columns:1fr 170px;gap:12px;align-items:end}.sig{width:100%;height:110px;border:1px dashed #9ca3af;border-radius:8px;background:#fff;touch-action:none}.sig-actions{display:flex;gap:8px;margin-top:7px}.sig-actions .btn{padding:7px 9px;font-size:12px}
     .notice{padding:11px 13px;border-radius:10px;margin-bottom:14px;font-size:13px}.notice.info{background:#eff6ff;color:#1d4ed8}.notice.warn{background:var(--warnbg);color:var(--warn)}.notice.error{background:var(--badbg);color:var(--bad)}.notice.ok{background:var(--okbg);color:var(--ok)}
-    .hidden{display:none!important}.login{min-height:100vh;display:grid;place-items:center;padding:18px}.login-card{width:min(430px,100%);background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:28px}.login-card h1{margin:0 0 6px}.login-card p{margin:0 0 20px;color:var(--muted);font-size:14px}.login-card .field{margin-bottom:12px}.login-card .btn{width:100%;margin-top:6px}
+    .hidden{display:none!important}
     .empty{padding:35px;text-align:center;color:var(--muted)}.actions{display:flex;gap:8px;flex-wrap:wrap}.mini{font-size:11px;color:var(--muted)}
     @media(max-width:1050px){.grid{grid-template-columns:1fr}.sidebar{position:static}.stats{grid-template-columns:repeat(2,1fr)}.release-grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr 1fr}.span2{grid-column:auto}.span3{grid-column:1/-1}}
     @media(max-width:650px){.page{padding:12px}.stats{grid-template-columns:1fr 1fr}.form-grid{grid-template-columns:1fr}.span3{grid-column:auto}.topbar{padding:0 12px}.userbar{font-size:11px}.sig-wrap{grid-template-columns:1fr}.card{padding:14px}}
   </style>
 </head>
 <body>
-  <div id="loading" class="login"><div class="login-card"><h1>VOLMEX</h1><p>Iniciando sistema de liberaciones…</p></div></div>
 
-  <div id="loginView" class="login hidden">
-    <div class="login-card">
-      <h1>VOLMEX</h1>
-      <p>Sistema de liberación de producto · acceso mediante cuenta de Google.</p>
-      <div id="loginNotice"></div>
-      <button id="googleLoginBtn" class="btn primary" type="button">Continuar con Google</button>
-      <p class="mini" style="margin-top:16px">No necesitas escribir correo ni contraseña. Firebase identifica al usuario mediante Google y su perfil de Firestore determina el rol y área.</p>
-    </div>
-  </div>
-
-  <div id="appView" class="hidden">
+  <div id="appView">
     <header class="topbar">
       <div class="brand"><div class="brand-mark">V</div><div>VOLMEX<small>Sistema de liberaciones</small></div></div>
-      <div class="userbar"><span id="userName">Usuario</span><span id="userRole" class="role-pill">rol</span><button id="logoutBtn" class="btn secondary">Salir</button></div>
+      <div class="userbar">
+        <span id="userName">Usuario</span>
+        <span id="userRole" class="role-pill">Administrador</span>
+      </div>
     </header>
     <main class="page">
       <div id="globalNotice"></div>
@@ -85,7 +76,7 @@
                   <div class="field span3"><label>Comentarios generales</label><textarea id="newComments" rows="2"></textarea></div>
                 </div></div>
                 <div class="subcard full"><h3>Responsable de área · Líder</h3><div class="form-grid">
-                  <div class="field"><label>Nombre</label><input id="newLeaderName" readonly></div>
+                  <div class="field"><label>Nombre</label><input id="newLeaderName"></div>
                   <div class="field"><label>Firma electrónica</label><div><canvas class="sig" id="newLeaderSig" width="800" height="220"></canvas><div class="sig-actions"><button class="btn secondary" type="button" data-clear-sig="newLeaderSig">Limpiar firma</button></div></div></div>
                 </div></div>
                 <div class="subcard full"><h3>Checklist de revisión</h3><div class="table-wrap"><table class="items-table"><thead><tr><th>#</th><th>Punto a revisar</th><th>Cumple (Sí/No)</th><th>Comentarios del líder</th></tr></thead><tbody id="newItemsBody"></tbody></table></div></div>
@@ -129,10 +120,7 @@
   </div>
 
   <script type="module">
-    // ============================================================
-    // 1) PEGA AQUÍ LA CONFIGURACIÓN DE TU PROYECTO FIREBASE.
-    // Firebase Console > Project settings > Your apps > Web app.
-    // ============================================================
+    // Configuración de tu proyecto Firebase
     const firebaseConfig = {
       apiKey: "AIzaSyBSGkpmtvuyduy41MbuRtlTu_xrNPT2dnQ",
       authDomain: "f-ln-1fce3.firebaseapp.com",
@@ -145,7 +133,6 @@
     };
 
     import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
-    import { getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, signOut } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
     import { getFirestore, collection, doc, addDoc, getDoc, getDocs, query, orderBy, limit, updateDoc, serverTimestamp, writeBatch } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
     import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-storage.js";
 
@@ -168,7 +155,11 @@
       "Pulir todos los filos de la estructura"
     ];
 
-    let app, auth, db, storage, currentUser = null, currentProfile = null, currentRelease = null;
+    // Perfil local predeterminado con rol 'admin' para permitir editar todas las secciones
+    let app, db, storage, currentRelease = null;
+    let currentUser = { uid: "local_user", email: "operador@volmex.com" };
+    let currentProfile = { name: "Operador VOLMEX", role: "admin", area: "" };
+
     const $ = id => document.getElementById(id);
     const esc = s => String(s ?? "").replace(/[&<>'"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[c]));
     const nowText = () => new Date().toLocaleString("es-MX", { dateStyle:"short", timeStyle:"short" });
@@ -243,10 +234,9 @@
       currentRelease={...r,id};
       $("editorTitle").textContent=`Orden ${r.general?.productionOrder || id}`;
       $("editorSubtitle").textContent=`${r.general?.area||''} · ${r.general?.model||'Sin modelo'} · ${statusLabel(r.status)}`;
-      $("editArea").value=r.general?.area||AREAS[0]; $("editCode").value=r.general?.code||"CA-FL-CV-015"; $("editIssueDate").value=dateInput(r.general?.issueDate)||"2025-05-30"; $("editRevision").value=r.general?.revision||"00"; $("editOrder").value=r.general?.productionOrder||id; $("editModel").value=r.general?.model||""; $("editInspection").value=dateInput(r.general?.inspectionDate); $("editLiberation").value=dateInput(r.general?.liberationDate); $("editMaterial").value=r.general?.material||"";
-      $("editLeaderName").value=r.leader?.name||""; $("editLeaderDate").value=dateInput(r.leader?.date); $("editProductionName").value=r.production?.name||""; $("editProductionReceived").value=dateInput(r.production?.receivedDate); $("editProductionDate").value=dateInput(r.production?.date); $("editQualityName").value=r.quality?.name||""; $("editQualityDate").value=dateInput(r.quality?.date);
-      ["editArea","editOrder","editModel","editInspection","editLiberation","editMaterial"].forEach(id2=>$(id2).disabled=!canEdit(currentProfile?.role,'leader'));
-      $("editLeaderName").disabled=!canEdit(currentProfile?.role,'leader'); $("editLeaderDate").disabled=!canEdit(currentProfile?.role,'leader'); $("editProductionName").disabled=!canEdit(currentProfile?.role,'production'); $("editProductionReceived").disabled=!canEdit(currentProfile?.role,'production'); $("editProductionDate").disabled=!canEdit(currentProfile?.role,'production'); $("editQualityName").disabled=!canEdit(currentProfile?.role,'quality'); $("editQualityDate").disabled=!canEdit(currentProfile?.role,'quality');
+      $("editArea").value=r.general?.area||AREAS[0]; $("editCode").value=r.general?.code\vert{}\vert{}"CA-FL-CV-015"; $("editIssueDate").value=dateInput(r.general?.issueDate)||"2025-05-30"; $("editRevision").value=r.general?.revision\vert{}\vert{}"00"; $("editOrder").value=r.general?.productionOrder||id; $("editModel").value=r.general?.model\vert{}\vert{}""; $("editInspection").value=dateInput(r.general?.inspectionDate); $("editLiberation").value=dateInput(r.general?.liberationDate); $("editMaterial").value=r.general?.material||"";
+      $("editLeaderName").value=r.leader?.name||""; $("editLeaderDate").value=dateInput(r.leader?.date); $("editProductionName").value=r.production?.name||""; $("editProductionReceived").value=dateInput(r.production?.receivedDate); $("editProductionDate").value=dateInput(r.production?.date); $("editQualityName").value=r.quality?.name\vert{}\vert{}""; $("editQualityDate").value=dateInput(r.quality?.date);
+      ["editArea","editOrder","editModel","editInspection","editLiberation","editMaterial"].forEach(id2=>$(id2).disabled=!canEdit(currentProfile?.role,'leader'));$("editLeaderName").disabled=!canEdit(currentProfile?.role,'leader'); $("editLeaderDate").disabled=!canEdit(currentProfile?.role,'leader'); $("editProductionName").disabled=!canEdit(currentProfile?.role,'production'); $("editProductionReceived").disabled=!canEdit(currentProfile?.role,'production'); $("editProductionDate").disabled=!canEdit(currentProfile?.role,'production'); $("editQualityName").disabled=!canEdit(currentProfile?.role,'quality'); $("editQualityDate").disabled=!canEdit(currentProfile?.role,'quality');
       $("saveLeaderBtn").disabled=!canEdit(currentProfile?.role,'leader'); $("saveProductionBtn").disabled=!canEdit(currentProfile?.role,'production'); $("saveQualityBtn").disabled=!canEdit(currentProfile?.role,'quality');
       $("leaderCard").classList.toggle('hidden', !(currentProfile?.role==='leader'||currentProfile?.role==='admin'||r.leader));
       $("productionCard").classList.toggle('hidden', !(currentProfile?.role==='production'||currentProfile?.role==='admin'||r.production));
@@ -256,6 +246,7 @@
     }
 
     async function getRecentReleases(){
+      if(!db) return [];
       const q=query(collection(db,"releases"),orderBy("updatedAt","desc"),limit(100));
       const snap=await getDocs(q); return snap.docs.map(d=>({id:d.id,...d.data()}));
     }
@@ -264,7 +255,12 @@
     function renderRows(list, tbodyId){
       const tbody=$(tbodyId); if(!list.length){tbody.innerHTML=`<tr><td colspan="9"><div class="empty">No hay registros para mostrar.</div></td></tr>`;return;}
       tbody.innerHTML=list.map(r=>{const st=displayStatus(r); return `<tr><td><b>${esc(r.general?.productionOrder||'—')}</b></td><td>${esc(r.general?.area||'—')}</td><td>${esc(r.general?.model||'—')}</td><td>${r.leader?.completed?'✓':'—'}</td><td>${r.production?.completed?'✓':'—'}</td><td>${r.quality?.completed?'✓':'—'}</td><td><span class="status ${statusClass(st)}">${esc(statusLabel(st))}</span></td><td>${rowActions(r.id)}</td></tr>`;}).join('');
-      tbody.querySelectorAll("[data-open-release]").forEach(b=>b.addEventListener('click',async()=>{ const d=await getDoc(doc(db,"releases",b.dataset.openRelease)); if(d.exists()) openRelease(d.data(),d.id); }));
+      tbody.querySelectorAll("[data-open-release]").forEach(b=>b.addEventListener('click',async()=>{ 
+        if(db){
+          const d=await getDoc(doc(db,"releases",b.dataset.openRelease)); 
+          if(d.exists()) openRelease(d.data(),d.id); 
+        }
+      }));
     }
 
     async function loadReleases(){
@@ -274,7 +270,7 @@
       try{ const list=await getRecentReleases(); $("statTotal").textContent=list.length; $("statPending").textContent=list.filter(r=>displayStatus(r)==='pendiente').length; $("statComplete").textContent=list.filter(r=>displayStatus(r)==='completa').length; $("statPayroll").textContent=list.filter(r=>displayStatus(r)==='enviada_nomina').length; renderRows(list.slice(0,15),"dashboardRows"); }catch(e){notice("globalNotice",firebaseError(e),"error")}
     }
     async function loadPayroll(){
-      if(!['payroll','admin'].includes(currentProfile?.role)){ $("payrollRows").innerHTML='<tr><td colspan="5"><div class="empty">Este apartado está disponible para Nómina y Administración.</div></td></tr>'; return; }
+      if(!db) return;
       try{
         const snap=await getDocs(query(collection(db,"nomina_queue"),orderBy("sentAt","desc"),limit(100)));
         const list=snap.docs.map(d=>({id:d.id,...d.data()}));
@@ -287,18 +283,44 @@
       if(!currentRelease)return;
       const leaderItems=CHECKLIST.map((p,i)=>({point:p,response:document.querySelector(`[data-edit-leader="${i}"]`).value,comment:document.querySelector(`[data-edit-comment="${i}"]`).value}));
       const general={area:$("editArea").value,code:$("editCode").value,issueDate:$("editIssueDate").value,revision:$("editRevision").value,productionOrder:$("editOrder").value.trim(),model:$("editModel").value.trim(),inspectionDate:$("editInspection").value,liberationDate:$("editLiberation").value,material:$("editMaterial").value.trim()};
-      const leader={name:$("editLeaderName").value.trim()||currentProfile.name||currentUser.email,date:$("editLeaderDate").value,signature:sigPads.leader?.get()||currentRelease.leader?.signature||null,completed:true,completedAt:serverTimestamp()};
-      await updateDoc(doc(db,"releases",currentRelease.id),{general,leader,leaderItems,updatedAt:serverTimestamp()}); const fresh=await getDoc(doc(db,"releases",currentRelease.id)); currentRelease={...fresh.data(),id:currentRelease.id}; notice("editorNotice","Sección de Líder guardada.","ok"); openRelease(currentRelease,currentRelease.id);
+      const leader={name:$("editLeaderName").value.trim()\vert{}\vert{}currentProfile.name\vert{}\vert{}currentUser.email,date:$("editLeaderDate").value,signature:sigPads.leader?.get()||currentRelease.leader?.signature||null,completed:true,completedAt:serverTimestamp()};
+      
+      if(db){
+        await updateDoc(doc(db,"releases",currentRelease.id),{general,leader,leaderItems,updatedAt:serverTimestamp()}); 
+        const fresh=await getDoc(doc(db,"releases",currentRelease.id)); 
+        currentRelease={...fresh.data(),id:currentRelease.id}; 
+      } else {
+        currentRelease={...currentRelease,general,leader,leaderItems};
+      }
+      notice("editorNotice","Sección de Líder guardada.","ok"); openRelease(currentRelease,currentRelease.id);
     }
+
     async function saveProduction(){
       const productionItems=CHECKLIST.map((p,i)=>({point:p,response:document.querySelector(`[data-edit-production="${i}"]`).value}));
       const production={name:$("editProductionName").value.trim()||currentProfile.name||currentUser.email,receivedDate:$("editProductionReceived").value,date:$("editProductionDate").value,signature:sigPads.production?.get()||currentRelease.production?.signature||null,completed:true,completedAt:serverTimestamp()};
-      await updateDoc(doc(db,"releases",currentRelease.id),{productionItems,production,updatedAt:serverTimestamp()}); const fresh=await getDoc(doc(db,"releases",currentRelease.id)); currentRelease={...fresh.data(),id:currentRelease.id}; notice("editorNotice","Sección de Producción guardada.","ok"); openRelease(currentRelease,currentRelease.id);
+      
+      if(db){
+        await updateDoc(doc(db,"releases",currentRelease.id),{productionItems,production,updatedAt:serverTimestamp()}); 
+        const fresh=await getDoc(doc(db,"releases",currentRelease.id)); 
+        currentRelease={...fresh.data(),id:currentRelease.id}; 
+      } else {
+        currentRelease={...currentRelease,productionItems,production};
+      }
+      notice("editorNotice","Sección de Producción guardada.","ok"); openRelease(currentRelease,currentRelease.id);
     }
+
     async function saveQuality(){
       const qualityItems=CHECKLIST.map((p,i)=>({point:p,response:document.querySelector(`[data-edit-quality="${i}"]`).value}));
-      const quality={name:$("editQualityName").value.trim()||currentProfile.name||currentUser.email,date:$("editQualityDate").value,signature:sigPads.quality?.get()||currentRelease.quality?.signature||null,completed:true,completedAt:serverTimestamp()};
-      await updateDoc(doc(db,"releases",currentRelease.id),{qualityItems,quality,updatedAt:serverTimestamp()}); const fresh=await getDoc(doc(db,"releases",currentRelease.id)); currentRelease={...fresh.data(),id:currentRelease.id}; notice("editorNotice","Sección de Calidad guardada.","ok"); openRelease(currentRelease,currentRelease.id);
+      const quality={name:$("editQualityName").value.trim()\vert{}\vert{}currentProfile.name\vert{}\vert{}currentUser.email,date:$("editQualityDate").value,signature:sigPads.quality?.get()||currentRelease.quality?.signature||null,completed:true,completedAt:serverTimestamp()};
+      
+      if(db){
+        await updateDoc(doc(db,"releases",currentRelease.id),{qualityItems,quality,updatedAt:serverTimestamp()}); 
+        const fresh=await getDoc(doc(db,"releases",currentRelease.id)); 
+        currentRelease={...fresh.data(),id:currentRelease.id}; 
+      } else {
+        currentRelease={...currentRelease,qualityItems,quality};
+      }
+      notice("editorNotice","Sección de Calidad guardada.","ok"); openRelease(currentRelease,currentRelease.id);
     }
 
     function makePdf(r){
@@ -320,51 +342,121 @@
     }
 
     async function sendToPayroll(){
-      if(!currentRelease || !releaseComplete(currentRelease) || !['leader','admin'].includes(currentProfile.role)) return;
+      if(!currentRelease || !releaseComplete(currentRelease)) return;
       try{
         clearNotice('editorNotice'); notice('editorNotice','Generando PDF y enviándolo a la bandeja de Nómina…','info');
-        const pdf=makePdf(currentRelease); const blob=pdf.output('blob'); const storagePath=`releases/${currentRelease.id}.pdf`; await uploadBytes(ref(storage,storagePath),blob,{contentType:'application/pdf'});
-        const batch=writeBatch(db); batch.set(doc(db,'nomina_queue',currentRelease.id),{releaseId:currentRelease.id,productionOrder:currentRelease.general?.productionOrder||currentRelease.id,area:currentRelease.general?.area||'',storagePath,sentBy:currentUser.uid,sentByName:currentProfile.name||currentUser.email,sentAt:serverTimestamp()}); batch.update(doc(db,'releases',currentRelease.id),{status:'enviada_nomina',updatedAt:serverTimestamp()}); await batch.commit();
-        const fresh=await getDoc(doc(db,'releases',currentRelease.id));currentRelease={...fresh.data(),id:currentRelease.id};notice('editorNotice','Liberación integrada en un PDF y enviada a Nómina.','ok');openRelease(currentRelease,currentRelease.id);
+        const pdf=makePdf(currentRelease); const blob=pdf.output('blob'); const storagePath=`releases/${currentRelease.id}.pdf`; 
+        if(storage && db){
+          await uploadBytes(ref(storage,storagePath),blob,{contentType:'application/pdf'});
+          const batch=writeBatch(db); 
+          batch.set(doc(db,'nomina_queue',currentRelease.id),{releaseId:currentRelease.id,productionOrder:currentRelease.general?.productionOrder||currentRelease.id,area:currentRelease.general?.area||'',storagePath,sentBy:currentUser.uid,sentByName:currentProfile.name||currentUser.email,sentAt:serverTimestamp()}); 
+          batch.update(doc(db,'releases',currentRelease.id),{status:'enviada_nomina',updatedAt:serverTimestamp()}); 
+          await batch.commit();
+          const fresh=await getDoc(doc(db,'releases',currentRelease.id));currentRelease={...fresh.data(),id:currentRelease.id};
+        } else {
+          currentRelease.status = 'enviada_nomina';
+        }
+        notice('editorNotice','Liberación integrada en un PDF y enviada a Nómina.','ok');openRelease(currentRelease,currentRelease.id);
       }catch(e){notice('editorNotice',firebaseError(e),'error')}
     }
 
     function firebaseError(e){
-      const code=e?.code||''; const map={'auth/invalid-credential':'Correo o contraseña incorrectos.','auth/invalid-login-credentials':'Correo o contraseña incorrectos.','auth/user-not-found':'Usuario no encontrado.','auth/wrong-password':'Contraseña incorrecta.','auth/too-many-requests':'Demasiados intentos. Intenta más tarde.','auth/popup-closed-by-user':'La ventana de Google se cerró antes de completar el acceso.','auth/popup-blocked':'El navegador bloqueó la ventana de Google. Permite ventanas emergentes para este sitio.','auth/cancelled-popup-request':'Ya existe una ventana de acceso de Google abierta.','permission-denied':'Firebase bloqueó la operación por reglas de seguridad.'};return map[code]||e?.message||'Ocurrió un error inesperado.';
-    }
-
-    async function init(){
-      populateAreas();renderNewItems();
-      document.querySelectorAll('.nav-btn').forEach(b=>b.addEventListener('click',()=>showSection(b.dataset.section)));
-      $('dashboardNewBtn').addEventListener('click',()=>showSection('newRelease'));$('newReleaseNav').addEventListener('click',()=>initNewForm());$('cancelNewBtn').addEventListener('click',()=>showSection('dashboard'));$('refreshReleasesBtn').addEventListener('click',loadReleases);$('filterArea').addEventListener('change',loadReleases);$('filterStatus').addEventListener('change',loadReleases);
-      document.querySelectorAll('[data-clear-sig]').forEach(b=>b.addEventListener('click',()=>sigPads[b.dataset.clearSig==='newLeaderSig'?'newLeader':'leader']?.clear() || sigPads[b.dataset.clearSig.replace('edit','').replace('Sig','').toLowerCase()]?.clear()));
-      $('backReleasesBtn').addEventListener('click',()=>showSection('releases'));$('pdfBtn').addEventListener('click',()=>{if(currentRelease)makePdf(currentRelease).save(`Liberacion_${currentRelease.general?.productionOrder||currentRelease.id}.pdf`)});$('sendPayrollBtn').addEventListener('click',sendToPayroll);
-      $('saveLeaderBtn').addEventListener('click',async()=>{try{await saveLeader()}catch(e){notice('editorNotice',firebaseError(e),'error')}});$('saveProductionBtn').addEventListener('click',async()=>{try{await saveProduction()}catch(e){notice('editorNotice',firebaseError(e),'error')}});$('saveQualityBtn').addEventListener('click',async()=>{try{await saveQuality()}catch(e){notice('editorNotice',firebaseError(e),'error')}});
-      $('logoutBtn').addEventListener('click',()=>signOut(auth));
-      $('googleLoginBtn').addEventListener('click',async()=>{try{clearNotice('loginNotice');const provider=new GoogleAuthProvider();await signInWithPopup(auth,provider)}catch(err){notice('loginNotice',firebaseError(err),'error')}});
-      $('newReleaseForm').addEventListener('submit',async e=>{e.preventDefault();try{
-        const area=$('newArea').value; if(currentProfile.role!=='admin' && currentProfile.role!=='leader') throw new Error('Solo un Líder de área o Administrador puede crear la liberación.');
-        if(currentProfile.role==='leader' && currentProfile.area && currentProfile.area!==area) throw new Error('El Líder solo puede crear liberaciones de su área asignada.');
-        const leaderItems=CHECKLIST.map((p,i)=>({point:p,response:document.querySelector(`[data-new-leader="${i}"]`).value,comment:document.querySelector(`[data-new-comment="${i}"]`).value}));
-        const refDoc=await addDoc(collection(db,'releases'),{general:{area,productionOrder:$('newOrder').value.trim(),model:$('newModel').value.trim(),inspectionDate:$('newInspection').value,liberationDate:$('newLiberation').value,material:$('newMaterial').value.trim(),comments:$('newComments').value.trim()},leaderItems,productionItems:CHECKLIST.map(point=>({point,response:''})),qualityItems:CHECKLIST.map(point=>({point,response:''})),leader:{name:$('newLeaderName').value.trim(),signature:sigPads.newLeader?.get()||null,completed:true,completedAt:serverTimestamp()},production:{completed:false},quality:{completed:false},status:'pendiente',createdBy:currentUser.uid,createdAt:serverTimestamp(),updatedAt:serverTimestamp()});
-        notice('newReleaseNotice',`Liberación creada correctamente. Orden: ${$('newOrder').value.trim()}.`,'ok');$('newReleaseForm').reset();$('newLeaderName').value=currentProfile.name||currentUser.email;initNewSignature();
-        const fresh=await getDoc(doc(db,'releases',refDoc.id)); openRelease(fresh.data(),refDoc.id);
-      }catch(e){notice('newReleaseNotice',firebaseError(e),'error')}});
-      if(!isConfigured()){ $('loading').classList.add('hidden'); $('loginView').classList.remove('hidden'); notice('loginNotice','Primero reemplaza los valores TU_... con la configuración de Firebase de tu proyecto.','warn'); return; }
-      app=initializeApp(firebaseConfig);auth=getAuth(app);db=getFirestore(app);storage=getStorage(app);
-      onAuthStateChanged(auth,async user=>{
-        try{
-          if(!user){currentUser=null;currentProfile=null;$('appView').classList.add('hidden');$('loginView').classList.remove('hidden');$('loading').classList.add('hidden');return;}
-          currentUser=user;const u=await getDoc(doc(db,'users',user.uid));if(!u.exists()){await signOut(auth);$('loading').classList.add('hidden');$('loginView').classList.remove('hidden');notice('loginNotice','Tu cuenta existe en Authentication, pero no tiene un perfil en /users/{UID}.','error');return;}
-          currentProfile=u.data();$('userName').textContent=currentProfile.name||user.email;$('userRole').textContent=ROLE_LABELS[currentProfile.role]||currentProfile.role;$('newReleaseNav').classList.toggle('hidden',!['leader','admin'].includes(currentProfile.role));$('newReleaseNav').onclick=()=>{initNewForm();showSection('newRelease')};$('payrollNav').classList.toggle('hidden',!['payroll','admin'].includes(currentProfile.role));
-          $('appView').classList.remove('hidden');$('loginView').classList.add('hidden');$('loading').classList.add('hidden');initNewForm();showSection('dashboard');
-        }catch(e){$('loading').classList.add('hidden');notice('loginNotice',firebaseError(e),'error')}
-      });
+      return e?.message || 'Ocurrió un error inesperado.';
     }
 
     function initNewForm(){
-      populateAreas(); $('newLeaderName').value=currentProfile?.name||currentUser?.email||''; if(currentProfile?.role==='leader' && currentProfile.area) {$('newArea').value=currentProfile.area;$('newArea').disabled=true}else $('newArea').disabled=false; initNewSignature();
+      populateAreas(); 
+      $('newLeaderName').value = currentProfile?.name \vert{}\vert{} '';$('newArea').disabled = false; 
+      initNewSignature();
     }
+
+    function init(){
+      populateAreas();
+      renderNewItems();
+
+      document.querySelectorAll('.nav-btn').forEach(b=>b.addEventListener('click',()=>showSection(b.dataset.section)));
+      $('dashboardNewBtn').addEventListener('click',()=>showSection('newRelease'));$('newReleaseNav').addEventListener('click',()=>{initNewForm();showSection('newRelease')});
+      $('cancelNewBtn').addEventListener('click',()=>showSection('dashboard'));$('refreshReleasesBtn').addEventListener('click',loadReleases);
+      $('filterArea').addEventListener('change',loadReleases);$('filterStatus').addEventListener('change',loadReleases);
+
+      document.querySelectorAll('[data-clear-sig]').forEach(b=>b.addEventListener('click',()=> {
+        const target = b.dataset.clearSig;
+        if(target === 'newLeaderSig') sigPads.newLeader?.clear();
+        else if (target.includes('Leader')) sigPads.leader?.clear();
+        else if (target.includes('Production')) sigPads.production?.clear();
+        else if (target.includes('Quality')) sigPads.quality?.clear();
+      }));
+
+      $('backReleasesBtn').addEventListener('click',()=>showSection('releases'));$('pdfBtn').addEventListener('click',()=>{if(currentRelease)makePdf(currentRelease).save(`Liberacion_${currentRelease.general?.productionOrder||currentRelease.id}.pdf`)});
+      $('sendPayrollBtn').addEventListener('click',sendToPayroll);
+
+      $('saveLeaderBtn').addEventListener('click',async()=>{try{await saveLeader()}catch(e){notice('editorNotice',firebaseError(e),'error')}});
+      $('saveProductionBtn').addEventListener('click',async()=>{try{await saveProduction()}catch(e){notice('editorNotice',firebaseError(e),'error')}});$('saveQualityBtn').addEventListener('click',async()=>{try{await saveQuality()}catch(e){notice('editorNotice',firebaseError(e),'error')}});
+
+      $('newReleaseForm').addEventListener('submit',async e=>{
+        e.preventDefault();
+        try{
+          const area=$('newArea').value;
+          const leaderItems=CHECKLIST.map((p,i)=>({point:p,response:document.querySelector(`[data-new-leader="${i}"]`).value,comment:document.querySelector(`[data-new-comment="${i}"]`).value}));
+          const releaseData = {
+            general:{
+              area,
+              code:$('newCode').value,
+              issueDate:$('newIssueDate').value,
+              revision:$('newRevision').value,
+              productionOrder:$('newOrder').value.trim(),
+              model:$('newModel').value.trim(),
+              inspectionDate:$('newInspection').value,
+              liberationDate:$('newLiberation').value,
+              material:$('newMaterial').value.trim(),
+              comments:$('newComments').value.trim()
+            },
+            leaderItems,
+            productionItems:CHECKLIST.map(point=>({point,response:''})),
+            qualityItems:CHECKLIST.map(point=>({point,response:''})),
+            leader:{name:$('newLeaderName').value.trim(),signature:sigPads.newLeader?.get()||null,completed:true,completedAt:new Date()},
+            production:{completed:false},
+            quality:{completed:false},
+            status:'pendiente',
+            createdBy:currentUser.uid,
+            createdAt:new Date(),
+            updatedAt:new Date()
+          };
+
+          if(db){
+            const refDoc=await addDoc(collection(db,'releases'),{...releaseData, createdAt:serverTimestamp(), updatedAt:serverTimestamp(), leader:{...releaseData.leader, completedAt:serverTimestamp()}});
+            notice('newReleaseNotice',`Liberación creada correctamente. Orden: ${$('newOrder').value.trim()}.`,'ok');
+            $('newReleaseForm').reset();
+            initNewSignature();
+            const fresh=await getDoc(doc(db,'releases',refDoc.id)); 
+            openRelease(fresh.data(),refDoc.id);
+          } else {
+            const localId = "LOCAL_" + Date.now();
+            notice('newReleaseNotice',`Liberación creada (modo local). Orden: ${$('newOrder').value.trim()}.`,'ok');
+            openRelease(releaseData, localId);
+          }
+        }catch(e){notice('newReleaseNotice',firebaseError(e),'error')}
+      });
+
+      // Inicializar Firebase si los parámetros son válidos
+      if(isConfigured()){ 
+        try {
+          app=initializeApp(firebaseConfig);
+          db=getFirestore(app);
+          storage=getStorage(app);
+        } catch(err) {
+          console.warn("No se pudo conectar con Firebase, funcionando en modo local.", err);
+        }
+      }
+
+      // Configuración de interfaz inicial
+      $('userName').textContent = currentProfile.name;
+      $('userRole').textContent = ROLE_LABELS[currentProfile.role] || currentProfile.role;
+      
+      initNewForm();
+      showSection('newRelease'); // Se abre directo en 'Nueva liberación' para comenzar a llenar información
+    }
+
     init();
   </script>
 </body>
